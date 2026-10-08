@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Weather Dashboard and Packing Planner. Plan your day before you step outside.">
+  <title>Weather & Packing Planner</title>
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-title">
+        <span class="material-symbols-outlined header-icon" aria-hidden="true">partly_cloudy_day</span>
+        <div class="title-group">
+          <h1>Weather & Packing Planner</h1>
+          <p class="subtitle">Plan your day before you step outside.</p>
+        </div>
+      </div>
+      <div class="header-controls">
+        <span id="current-date" class="current-date"></span>
+        <button id="btn-settings" class="icon-button" aria-label="Open Settings" title="Settings">
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-main">
+      
+      <!-- Top Search & History Bar -->
+      <section class="search-section" aria-label="City search">
+        <form id="search-form" class="search-form" novalidate>
+          <div class="search-input-wrapper">
+            <span class="material-symbols-outlined search-field-icon" aria-hidden="true">search</span>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Search city (e.g. New York)" 
+              aria-label="City name"
+              required 
+              autocomplete="off"
+              aria-expanded="false"
+              aria-autocomplete="list"
+              aria-controls="autocomplete-list"
+              aria-haspopup="listbox"
+            />
+            <button type="submit" id="btn-search" class="search-button" aria-label="Search weather">
+              Search
+            </button>
+            <ul id="autocomplete-list" class="autocomplete-list hidden" role="listbox" aria-label="City suggestions"></ul>
+          </div>
+        </form>
+        <div class="suggestions-container" id="suggestions-container" aria-live="polite">
+          <span class="suggestions-label">Recent:</span>
+          <div id="search-history" class="history-chips">
+            <!-- Search history chips will render here dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Layout Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- Left Side: Weather and Forecast Info -->
+        <div class="weather-column">
+          <!-- Current Weather Card -->
+          <article class="card weather-card" id="weather-card" aria-labelledby="weather-card-title">
+            <div class="card-loading-overlay skeleton-container" id="weather-skeleton">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-text"></div>
+              <div class="skeleton skeleton-large-circle"></div>
+              <div class="skeleton skeleton-text"></div>
+              <div class="skeleton-grid">
+                <div class="skeleton skeleton-chip"></div>
+                <div class="skeleton skeleton-chip"></div>
+                <div class="skeleton skeleton-chip"></div>
+                <div class="skeleton skeleton-chip"></div>
+              </div>
+            </div>
+            
+            <div id="weather-content" class="weather-content hidden">
+              <div class="weather-header">
+                <div>
+                  <h2 id="weather-card-title" class="location-name">
+                    <span id="city-name">London</span>, <span id="country-name">GB</span>
+                  </h2>
+                  <p id="weather-description" class="weather-desc">Light rain</p>
+                </div>
+                <span id="weather-icon" class="material-symbols-outlined weather-main-icon">partly_cloudy_day</span>
+              </div>
+
+              <div class="temp-section">
+                <span id="temp-display" class="temp-value">18°C</span>
+                <div class="feels-like">
+                  <span class="material-symbols-outlined" aria-hidden="true">device_thermostat</span>
+                  <span>Feels like <strong id="feels-like-display">17°C</strong></span>
+                </div>
+              </div>
+
+              <div class="weather-details-grid">
+                <div class="detail-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">water_drop</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity-display" class="detail-value">72%</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">air</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="wind-display" class="detail-value">4.6 m/s</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">compress</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure-display" class="detail-value">1012 hPa</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Visibility</span>
+                    <span id="visibility-display" class="detail-value">10 km</span>
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">wb_sunny</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Sunrise</span>
+                    <span id="sunrise-display" class="detail-value">05:40 AM</span>
+                  </div>
+                </div>
+                <div class="detail-item animate-sunset">
+                  <span class="material-symbols-outlined" aria-hidden="true">bedtime</span>
+                  <div class="detail-info">
+                    <span class="detail-label">Sunset</span>
+                    <span id="sunset-display" class="detail-value">09:12 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3-Day Forecast Section -->
+          <section class="forecast-section" aria-label="3-day weather forecast">
+            <h3 class="section-title">
+              <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+              <span>Three-Day Forecast</span>
+            </h3>
+            
+            <div class="forecast-grid" id="forecast-grid">
+              <!-- Skeletons -->
+              <div class="card forecast-card skeleton-container" id="forecast-skeletons">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-circle"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+              <div class="card forecast-card skeleton-container">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-circle"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+              <div class="card forecast-card skeleton-container">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-circle"></div>
+                <div class="skeleton skeleton-text"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Side: Packing Planner -->
+        <article class="card packing-card" aria-labelledby="packing-card-title">
+          <div class="card-loading-overlay skeleton-container" id="packing-skeleton">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+          
+          <div id="packing-content" class="packing-content hidden">
+            <div class="card-header">
+              <span class="material-symbols-outlined card-header-icon" aria-hidden="true">backpack</span>
+              <h2 id="packing-card-title" class="card-title">Packing Recommendations</h2>
+            </div>
+            <p class="packing-intro">Based on today's forecast, we suggest packing the following items:</p>
+            
+            <ul class="packing-list" id="packing-list" aria-label="Packing item checklist">
+              <!-- Packing items will render here dynamically -->
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- General Error Display Card (Hidden by default) -->
+      <article class="card error-card hidden" id="error-card" aria-live="assertive">
+        <span class="material-symbols-outlined error-icon" aria-hidden="true">error_outline</span>
+        <div class="error-info">
+          <h2 class="error-title">City not found</h2>
+          <p id="error-message" class="error-message">Please check the spelling and try again.</p>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 Weather & Packing Planner • Built with Google Material Design principles</p>
+    </footer>
+  </div>
+
+  <!-- Settings Dialog -->
+  <dialog id="settings-dialog" class="settings-dialog">
+    <div class="dialog-header">
+      <div class="dialog-title-group">
+        <span class="material-symbols-outlined dialog-header-icon">settings</span>
+        <h2>Settings</h2>
+      </div>
+      <button id="btn-close-settings" class="icon-button" aria-label="Close Settings">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    
+    <div class="dialog-body">
+      <form id="settings-form" class="settings-form">
+        <div class="form-group">
+          <label for="input-api-key">OpenWeather API Key</label>
+          <input 
+            type="text" 
+            id="input-api-key" 
+            placeholder="Paste OpenWeather API key here" 
+            autocomplete="off"
+          />
+          <p class="field-help">If the default key is unauthorized, you can enter your own key here. Key will be saved securely in your browser's local storage.</p>
+        </div>
+
+        <div class="form-group">
+          <label id="unit-group-label">Temperature Unit</label>
+          <div class="segmented-control" role="radiogroup" aria-labelledby="unit-group-label">
+            <label class="segment">
+              <input type="radio" name="unit-selection" value="metric" checked>
+              <span class="segment-label">Celsius (°C)</span>
+            </label>
+            <label class="segment">
+              <input type="radio" name="unit-selection" value="imperial">
+              <span class="segment-label">Fahrenheit (°F)</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="dialog-actions">
+          <button type="button" id="btn-reset-settings" class="button secondary-button">Reset Default Key</button>
+          <button type="submit" id="btn-save-settings" class="button primary-button">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>

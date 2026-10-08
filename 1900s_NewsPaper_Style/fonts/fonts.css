@@ -1,0 +1,75 @@
+/* The Motoring Gazette — self-hosted type.
+   Display: "ZT Bros Oskon 90s" · Text: "Source Serif 4" · Labels/specs: "Space Mono" */
+
+/* ---------- Display serif: ZT Bros Oskon 90s ---------- */
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-ExtraLight.otf") format("opentype");
+  font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-ExtLtIta.otf") format("opentype");
+  font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-Light.otf") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-LightItalic.otf") format("opentype");
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ZT Bros Oskon 90s";
+  src: url("display/ZTBrosOskon90s/ZTBrosOskon90s-Italic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
+/* ---------- Display script: JaneAusten (handwriting, personal-use only) ---------- */
+@font-face {
+  font-family: "JaneAusten";
+  src: url("display/JaneAusten/JaneAust.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+/* ---------- Text serif: Source Serif 4 (variable) ---------- */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("readable/SourceSerif4/SourceSerif4-opsz-wght.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("readable/SourceSerif4/SourceSerif4-Italic-opsz-wght.ttf") format("truetype");
+  font-weight: 200 900; font-style: italic; font-display: swap;
+}
+
+/* ---------- Mono: Space Mono ---------- */
+@font-face {
+  font-family: "Space Mono";
+  src: url("mono/SpaceMono/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("mono/SpaceMono/SpaceMono-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("mono/SpaceMono/SpaceMono-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("mono/SpaceMono/SpaceMono-BoldItalic.ttf") format("truetype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Saree Store</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Premium Saree Store</div>
+        <div class="cart-icon" id="cart-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div style="text-align: center; padding: 40px 0 50px;">
+            <h1 style="font-weight: 500; font-size: 2.5rem; margin-bottom: 15px;">Exquisite Saree Collection</h1>
+            <p style="color: #666; font-size: 1.1rem;">Explore our curated selection of premium sarees</p>
+        </div>
+        
+        <div class="row products-row" id="products-container">
+            <!-- Product cards will be dynamically inserted here by script.js -->
+        </div>
+    </div>
+    <script src="script.js?v=3"></script>
+</body>
+</html>

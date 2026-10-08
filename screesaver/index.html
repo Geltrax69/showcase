@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lockscreen — Animation Collection</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ LOCKSCREEN STAGE ============ -->
+<div id="stage" class="v-drift" aria-label="Lockscreen">
+  <div id="bg" class="bg" role="img" aria-label="Classroom background"></div>
+  <div class="vignette"></div>
+
+  <div id="person" class="person">
+    <img id="personImg" src="assets/person.png" alt="" draggable="false">
+  </div>
+
+  <div id="clock" class="clock">
+    <div id="time" class="time">9:41</div>
+    <div id="date" class="date">Saturday, October 3</div>
+  </div>
+
+  <div id="hint" class="hint">
+    <span class="hint-dot"></span>
+    Click or press any key to unlock
+  </div>
+
+  <nav id="variantBar" class="variant-bar" aria-label="Animation variants">
+    <span class="variant-label">Animations</span>
+    <button data-variant="drift" class="variant-btn active">1 · Drift In</button>
+    <button data-variant="rise" class="variant-btn">2 · Rise</button>
+    <button data-variant="materialize" class="variant-btn">3 · Materialize</button>
+    <button data-variant="arc" class="variant-btn">4 · Arc</button>
+    <button id="replayBtn" class="variant-btn ghost" title="Replay (R)">↻ Replay</button>
+  </nav>
+  <div id="variantNote" class="variant-note"></div>
+</div>
+
+<!-- ============ UNLOCKED DESKTOP (mock) ============ -->
+<div id="desktop" hidden>
+  <div class="menu-bar">
+    <span class="menu-left"> Finder&nbsp;&nbsp;File&nbsp;&nbsp;Edit&nbsp;&nbsp;View</span>
+    <span id="menuClock" class="menu-right">9:41</span>
+  </div>
+  <div class="desktop-inner">
+    <div class="welcome">Welcome back</div>
+    <div class="welcome-sub">Mac unlocked — that was the lockscreen animation collection.</div>
+    <div class="desktop-actions">
+      <button id="lockBtn" class="pill">Lock again</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

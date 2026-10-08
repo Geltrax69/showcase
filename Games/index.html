@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zombie Apocalypse - Odisha</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D render target -->
+  <div id="game-container"></div>
+
+  <!-- Crosshair -->
+  <div id="crosshair" class="hidden">+</div>
+
+  <!-- HUD overlay -->
+  <div id="hud" class="hidden">
+    <div id="hud-top-left">
+      <div id="health-wrap">
+        <span class="hud-label">HP</span>
+        <div id="health-bar"><div id="health-fill"></div></div>
+      </div>
+      <div id="weapon-wrap">
+        <span class="hud-label">WEAPON</span>
+        <span id="weapon-name">Knife</span>
+        <span id="ammo-count"></span>
+      </div>
+    </div>
+    <div id="hud-top-right">
+      <div id="objective-wrap">
+        <span class="hud-label">OBJECTIVE</span>
+        <span id="objective-text">Survive.</span>
+      </div>
+      <div id="zone-wrap">
+        <span class="hud-label">ZONE</span>
+        <span id="zone-name">-</span>
+      </div>
+    </div>
+    <div id="message-toast" class="hidden"></div>
+  </div>
+
+  <!-- Start screen -->
+  <div id="start-screen" class="overlay-screen">
+    <div class="overlay-inner">
+      <h1>ZOMBIE APOCALYPSE</h1>
+      <h2>Odisha Outbreak</h2>
+      <p class="story">
+        You wake up in your room in Odisha, India. Overnight the outbreak spread:
+        the people outside have turned into zombies. With only a small knife from
+        your room, you must survive the infested streets, find a gun, and link up
+        with the few survivors holding out at a research center. They are racing to
+        build a cure. Gather the ingredients they need, travel north to the medical
+        facility, deliver the cure to the lead scientist, then board the helicopter
+        to spread it across the world.
+      </p>
+      <div class="controls-legend">
+        <span class="hud-label">CONTROLS</span>
+        <ul>
+          <li><b>WASD</b> move</li>
+          <li><b>Shift</b> run</li>
+          <li><b>Mouse</b> look</li>
+          <li><b>Click / Left-click</b> fire gun or swing knife</li>
+          <li><b>1 / 2</b> switch weapon (knife / pistol)</li>
+          <li><b>R</b> reload</li>
+          <li><b>E</b> interact (talk, enter, pick up, board)</li>
+          <li><b>Esc</b> pause</li>
+        </ul>
+      </div>
+      <button id="start-button" type="button">START</button>
+    </div>
+  </div>
+
+  <!-- Pause screen -->
+  <div id="pause-screen" class="overlay-screen hidden">
+    <div class="overlay-inner">
+      <h1>PAUSED</h1>
+      <p>The outbreak waits for no one. Take a breath.</p>
+      <p class="controls-hint">
+        WASD move &middot; Shift run &middot; Mouse look &middot; Click attack &middot;
+        1/2 weapon &middot; R reload &middot; E interact &middot; Esc resume
+      </p>
+      <button id="resume-button" type="button">RESUME</button>
+    </div>
+  </div>
+
+  <!-- Win screen -->
+  <div id="win-screen" class="overlay-screen hidden">
+    <div class="overlay-inner">
+      <h1>THE WORLD IS SAVED</h1>
+      <p>The cure spread across the planet. Humanity endures.</p>
+      <button id="win-restart-button" type="button">PLAY AGAIN</button>
+    </div>
+  </div>
+
+  <!-- Lose screen -->
+  <div id="lose-screen" class="overlay-screen hidden">
+    <div class="overlay-inner">
+      <h1>YOU DIED</h1>
+      <p>The infection claimed another. The world grows darker.</p>
+      <button id="lose-restart-button" type="button">TRY AGAIN</button>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

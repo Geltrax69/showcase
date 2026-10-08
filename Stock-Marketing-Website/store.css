@@ -1,0 +1,576 @@
+*{
+    font-family: Montserrat; 
+    /* PAGE GAP IS 200 PX */
+  }
+  a{
+    text-decoration: none;
+  }
+  .header-box {
+    position: fixed;
+    left: 1px;
+    top: -1px;
+    z-index: 9999;
+    background-color: rgb(18, 18, 18);
+    padding: 0px;
+    border-radius: 5px; 
+    width: 1519px;
+    height: 87px;
+  }
+  .fixed-header {
+    position: fixed;
+    z-index: 9999;
+  
+  }
+  body{
+    background-color: rgb(18, 18, 18);
+    margin-left: 160px;
+    
+  }
+  .ribbon{
+    padding-top: 5px;
+    display: inline-flex;
+    
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    padding-left: 35pt;
+    
+  }
+  .st{
+    padding-left:4px;
+    color:rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .Explore{
+    padding-left: 20px;
+    padding-top: 22px;
+    color:white;
+    font-size: 14px;
+  
+    font-weight: lighter;
+  }
+  .Invesments{
+    padding-left: 20px;
+    padding-top: 22px;
+    color:rgba(111, 120, 220, 1);
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+  
+  .search-bar {
+    width: 350px;
+    padding: 13px;
+    border: 1px solid rgb(46, 46, 46); /* Add a border with the specified color */
+    border-radius: 12px;
+    background-color: transparent; /* Set background to transparent */
+    outline: none;
+    color: #fff; /* Text color */
+  }
+  .bell{
+    width: 20px;;
+    height:20px;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+  .ids{
+    width: 50px;;
+    height:50px;
+    padding-left: 30px;
+    padding-top: 15px;
+  }
+  .s-m{
+    display:inline-flex; 
+    justify-content: left;
+    margin-left: 50px;
+    padding-top: 100px;
+    font-size: 18px;
+    font-weight: lighter;
+    color:white;
+  }
+  .s-m2{
+    display:inline-flex; 
+    justify-content: left;
+    margin-left: 50px;
+    padding-top: 100px;
+    font-size: 18px;
+    font-weight: lighter;
+    color:rgb(255, 255, 255);
+  }
+  .sline{
+    margin-left: 50px;
+    border: 2px solid rgb(142, 150, 241); 
+    width: 100px;
+    position: absolute;
+    margin-top: -3px;
+  }
+  .divider{
+    margin-left: -180px;
+    border-color: rgb(31, 30, 30);
+    margin-top: -1px;
+  }
+
+
+  .sbiboxes{
+    position: relative;
+    top: 750px;
+  }
+  .sbiboxes1,.sbiboxes2,.sbiboxes3{
+    position: relative;
+    top: 750px;
+    margin-top:50px;
+  }
+  
+  .innews{
+    margin-left: 45px;
+    position: relative;
+    bottom: 80px;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .sbi_box{
+    margin-left: 10px;
+    display:inline-flex;
+    justify-content:center;
+    position: relative;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    
+    border: 1px solid rgb(116, 113, 113);
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: rgba(36, 35, 35, 0.648);
+  }
+  .sbi{ /* Image */
+    height: 70px;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+  .sbi_text{
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    font-weight:350;
+    font-size: 18px;
+    color: white;
+  }
+  .sbi_text1{
+    position: absolute;
+    top: 140px;
+    left: 30px;
+    font-size: 14px;
+    color: white;
+  }
+  .sbi_text2{
+    position: absolute;
+    top: 135px;
+    left: 30px;
+    font-size: 14px;
+    color: rgb(213, 84, 56);
+  }
+  .sbi_text21{
+    position: absolute;
+    top: 135px;
+    left: 30px;
+    font-size: 14px;
+    color: rgb(10, 187, 146);
+  }
+  @keyframes zoom {
+    100% {
+      transform: scale(1.02);
+   }
+  }
+  .sbi_box,.sbi_box1,.sbi_box2,.sbi_box3 {
+    transition: transform 0.2s ease-in-out;
+   }
+  .sbi_box:hover,.sbi_box1:hover,.sbi_box2:hover,.sbi_box3:hover,.sbi_box4:hover {
+   animation: zoom 0.2s forwards ease-out;
+  }
+  .sbi_box1{
+    display:inline-flex;
+    justify-content:center;
+    position: relative;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 113, 113);
+    width: 200px;
+    left: 10px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: rgba(36, 35, 35, 0.648);
+  }
+  .sbi_box2{
+    display:inline-flex;
+    justify-content:center;
+    position: relative;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 113, 113);
+    width: 200px;
+    left: 20px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: rgba(36, 35, 35, 0.648);
+  }
+  .sbi_box3{
+    display:inline-flex;
+    justify-content:center;
+    position: relative;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 113, 113);
+    width: 200px;
+    left: 30px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: rgba(36, 35, 35, 0.648);
+  }
+  .sbi_box4{
+    display:inline-flex;
+    justify-content:center;
+    position: relative;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 113, 113);
+    width: 200px;
+    left: 40px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: rgba(36, 35, 35, 0.648);
+  }
+  .topgainers{
+    margin-left: 45px;
+    position: relative;
+    top: 700px;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .roc{
+    position:absolute;
+    top: 220px;
+    left: 550px;
+    height:350px ;
+    width:350px ;
+    height: max-content;
+  }
+  .dash{
+    position: absolute;
+    top: 600px;
+    left: 480px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .sit{
+    position: absolute;
+    top: 680px;
+    left: 680px;
+    color: rgb(184, 184, 184);
+    font-weight: normal;
+    font-size: 18px;
+  }
+  
+  /* FOOTER  */
+  
+  .seventh{
+    background-image: url(https://imagetolink.com/ib/hwPVgILrg0.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    width: 1085pt;
+    height: 585pt;
+    background-color: rgba(19, 19, 19, 1);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    right:145px;
+    top:230px;
+    box-shadow: 20px 20px 40px 10px rgba(0, 0, 0, 0.19);
+    z-index: 99999;
+  }
+  .logo1{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    padding-left: 35pt;
+  }
+  .st1{
+    padding-left:4px;
+    color:rgba(255, 255, 255, 1);
+    font-size: 23px;
+    font-weight:bold;
+  }
+  .foot1{
+    font-size: 18px;
+    display:inline;
+    position: absolute;
+    top: 150px;
+    left: 210px;
+    text-align:left;
+    font-weight:lighter;
+    color: white;
+  }
+  .foot2{
+    font-size: 16px;
+    display:inline;
+    position: absolute;
+    top: 230px;
+    text-decoration:underline;
+    left: 210px;
+    text-align:left;
+    font-weight:lighter;
+    color: white;
+  }
+  .foot4{
+    font-size: 16px;
+    display:inline;
+    position: absolute;
+    top: 350px;
+    left: 210px;
+    text-align:left;
+    font-weight:bold;
+    color: white;
+  }
+  .foot5{
+    font-size: 18px;
+    display:inline;
+    position: absolute;
+    top: 570px;
+    left: 210px;
+    text-align:left;
+    font-weight:normal;
+    color: white;
+  }
+  .foot3{
+    font-size: 15px;
+    display:flex;
+    position:relative;
+    top: 100px;
+    left: 210px;
+    text-align:left;
+    font-weight:lighter;
+    color: white;
+    z-index: 999;
+  }
+  .icon{
+    display:inline;
+    position: relative;
+    top: 250px;
+    left: 115px;
+  }
+  #lin{
+    position:absolute;
+    left: 100px;
+    bottom: 300px;
+  }
+  #insta{
+    position:absolute;
+    left: 170px;
+    bottom: 300px;
+  }
+  #face{
+    position:absolute;
+    left: 240px;
+    bottom: 300px;
+  }
+  .foot_box{
+    background-image: url(https://imagetolink.com/ib/hwPVgILrg0.png);
+    background-size: cover;
+    background-position: center;
+    background-color:transparent;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 500px;
+    border-radius: 12px;
+    position: absolute;
+    right: 1px;
+    top:150px;
+    
+  }
+  .l1,.l2,.l3,.l4{
+    display:block;
+    width: 120px;
+    height: 125px;
+    background-color: rgba(24, 24, 24, 1);
+    border-radius: 8px;
+    position: absolute;
+    left: 220px;
+    bottom:30px;
+  }
+  .l2{margin-left: 150px;}
+  .l3{margin-left: 300px;}
+  .l4{margin-left: 450px;}
+  .t1{
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    top: 70px;
+    color: rgba(77, 77, 77, 1);
+  }
+
+.Balance{
+    width: 600px;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid rgba(77, 77, 77, 1);
+    border-radius: 5px;
+}
+.BA{
+    color: rgb(245, 241, 241);
+    font-weight: normal;
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+    font-size: 18px;
+    display: inline-flex;
+    
+}
+
+.ul{
+    border-color: rgb(46, 45, 45);
+    position: relative;
+    bottom: 20px;
+}
+.ul1{
+    border-color: transparent;
+    border-bottom: 2px dotted rgb(46, 45, 45);
+    
+}
+.rt{
+    color: rgb(195, 189, 189);
+    display: inline;
+    justify-content: right;
+    position:absolute;
+    left: 750px;
+    top: 370px;
+    
+}
+.rt1{
+    color: rgb(195, 189, 189);
+    display: inline;
+    justify-content: right;
+    position:absolute;
+    left: 750px;
+    top: 410px;
+    
+}
+.rt2{
+    color: rgb(195, 189, 189);
+    display: inline;
+    justify-content: right;
+    position:absolute;
+    left: 750px;
+    top: 480px;
+    
+}
+
+        /* withdrawl */
+.withdrawal-form {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    right: 230px;
+    top: 210px;
+    border: 1px solid rgb(46, 45, 45);
+    border-radius: 5px;
+  }
+  
+  .withdrawal-form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  .with {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    bottom: 10px;
+    opacity: 0.7;
+    font-size: 12px;
+  }
+  
+  .withdrawal-form input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+   border: 1px solid rgb(46, 46, 46); /* Add a border with the specified color */
+    border-radius: 12px;
+    background-color: transparent; /* Set background to transparent */
+    outline: none;
+    color: #fff; /* Text color */
+  }
+  
+  .withdrawal-form input[type="submit"] {
+    background-color:rgb(149, 183, 235);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 10px;
+    top: 150px;
+  }
+  
+  .withdrawal-form input[type="submit"]:hover {
+    background-color: rgb(13, 70, 215);
+  }
+  
+
+  .sbi{ /* Image */
+    height: 70px;
+    position: relative;
+    left: 30px;
+    top: 10px;
+  }
+.ot{
+    display: inline;
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+    color: white;
+    font-size: 10px;
+}
+
+.man{
+    display: inline-flex;
+    text-align: left;
+    margin-top:20px;
+    color: white;
+    position: absolute;
+    bottom: 80px;
+    opacity: 0.7;
+    font-size: 12px;
+}
+.term{
+    display: inline-flex;
+    text-align: left;
+    margin-top:20px;
+    left: 190px;
+    color: white;
+    position: absolute;
+    bottom: 80px;
+    opacity: 0.7;
+    font-size: 12px;
+
+}

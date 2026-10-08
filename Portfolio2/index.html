@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lalit Singh — Full-Stack Developer</title>
+  <meta name="description" content="Lalit Singh — full-stack developer. Real-time systems, Flutter apps, and things that actually ship." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=15" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <!-- guided-tour cursor (one-time sweep) -->
+  <div class="tour" data-tour aria-hidden="true">
+    <svg class="tour__dot" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 3l15 9-6.2 1.6L11 20.5 5 3z" fill="#08304c" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <span class="tour__tip" data-tourtip>this way</span>
+  </div>
+
+  <!-- live scroll guide -->
+  <button class="scrollguide" data-scrollguide type="button" aria-label="Scroll to the next section">
+    <span class="scrollguide__dot"></span>
+    <span data-guidelabel>scroll to explore</span>
+    <span class="scrollguide__arrow" data-guidearrow>↓</span>
+  </button>
+
+  <!-- ===== Announce ===== -->
+  <div class="announce">Currently building &amp; <b>open to opportunities</b> — 2026</div>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="nav__brand"><span class="nav__dot"></span>Lalit Singh</div>
+    <div class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#lab">Stack</a>
+    </div>
+    <a class="nav__cta" href="#contact">Let's talk</a>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero wrap" id="top">
+    <!-- prominent bottom-right reel (swap hello.mp4 for a real demo later) -->
+    <div class="hero__reel" data-reel aria-hidden="true">
+      <span class="hero__reel-tag">// now playing — demo reel</span>
+      <video src="hello.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- floating nav words the intro cursor collects into the navbar -->
+    <div class="floatwords" data-floatwords aria-hidden="true">
+      <span class="floatword" style="left:49%; top:30%">Work</span>
+      <span class="floatword" style="left:63%; top:60%">About</span>
+      <span class="floatword" style="left:39%; top:76%">Stack</span>
+    </div>
+    <div class="hero__row">
+      <div class="hero__intro">
+        <span class="hero__eyebrow"><span class="live"></span> Full-stack developer · India</span>
+        <h1 data-hero-title>I build things that <span class="rainbow-word">actually</span> ship.</h1>
+        <p class="hero__sub">Hi, I'm <b>Lalit</b> — I turn messy ideas into real-time apps, dashboards, and tools.
+          From <b>Go + WebSocket</b> scoreboards to <b>Flutter</b> products, I like the part where it goes live.</p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#work">See my work <span class="chip">↓</span></a>
+          <a class="btn btn--ghost" href="#contact">Let's talk</a>
+        </div>
+      </div>
+
+      <!-- scattered collage -->
+      <div class="collage" data-collage>
+        <span class="sticker sticker--star" data-float><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5 20.4l1.4-6.8L1.3 9.6l6.9-.7z"/></svg></span>
+        <span class="sticker sticker--bolt" data-float><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+        <span class="sticker sticker--heart" data-float><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21S3 15 3 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 2.5C21 15 12 21 12 21z"/></svg></span>
+
+        <div class="polaroid polaroid--video" data-card>
+          <div class="ph ph--lav"></div>
+          <div class="cap">shipping something</div>
+        </div>
+        <div class="polaroid polaroid--a" data-card>
+          <div class="ph ph--blue"></div>
+          <div class="cap">real-time scores</div>
+        </div>
+        <div class="polaroid polaroid--b" data-card>
+          <div class="ph ph--mint"></div>
+          <div class="cap">flutter app</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Tech marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__t">
+      <span>Flutter <i>✦</i> Go <i>✦</i> React <i>✦</i> TypeScript <i>✦</i> Spring Boot <i>✦</i> Node <i>✦</i> WebSockets <i>✦</i> Python <i>✦</i> GSAP <i>✦</i></span>
+      <span>Flutter <i>✦</i> Go <i>✦</i> React <i>✦</i> TypeScript <i>✦</i> Spring Boot <i>✦</i> Node <i>✦</i> WebSockets <i>✦</i> Python <i>✦</i> GSAP <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ===== About ===== -->
+  <section class="notebook section" id="about">
+    <div class="wrap notebook__intro">
+      <div class="note-cap">a quick intro,</div>
+      <h2>I'm a builder who ships,<br>not just scaffolds.</h2>
+      <p>I'm a full-stack developer who likes the whole pipeline — from a <span class="mark">Go backend</span>
+        streaming live data over WebSockets to a <span class="mark">Flutter</span> screen someone actually taps.
+        I've built sports platforms, school systems, inventory tools, and AI helpers — most of them
+        <span class="mark">in production</span>.</p>
+      <div class="note-stats">
+        <div class="note-stat"><b>20+</b><span>shipped repos</span></div>
+        <div class="note-stat"><b>6+</b><span>languages</span></div>
+        <div class="note-stat"><b>2</b><span>live platforms</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Work — the opening notebook ===== -->
+  <section class="bookshow" id="work">
+    <div class="bookshow__head">
+      <div class="note-cap">flip through it,</div>
+      <h2>open the notebook.</h2>
+      <p>Scroll to crack it open and turn the pages — every page is a project I shipped. Screens loop a placeholder reel; real demos drop in next.</p>
+    </div>
+
+    <div class="bookstage" data-bookstage>
+
+      <!-- scattered cards that magnetically assemble into a bento grid as you
+           scroll into the notebook, then stay settled behind the flipping book -->
+      <div class="book-scatter" data-scatter aria-hidden="true">
+        <div class="scrap" data-scrap style="width:13vw; left:0.5%;  top:6%"><div class="fill fill--1"></div><div class="cap">first commit</div></div>
+        <div class="scrap scrap--tall" data-scrap style="width:9.5vw; left:9%; top:30%"><div class="fill fill--4"></div><div class="cap">3am debugging</div></div>
+        <div class="scrap" data-scrap style="width:12vw; left:1.5%; top:58%"><div class="fill fill--3"></div><div class="cap">shipped it</div></div>
+        <div class="scrap scrap--sq" data-scrap style="width:8vw; left:11%; top:82%"><div class="fill fill--5"></div><div class="cap">whiteboard</div></div>
+        <div class="scrap" data-scrap style="width:12.5vw; right:0.5%; top:5%"><div class="fill fill--2"></div><div class="cap">demo day</div></div>
+        <div class="scrap scrap--sq" data-scrap style="width:8vw; right:10%; top:28%"><div class="fill fill--6"></div><div class="cap">first deploy</div></div>
+        <div class="scrap scrap--tall" data-scrap style="width:9.5vw; right:1.5%; top:50%"><div class="fill fill--1"></div><div class="cap">late night</div></div>
+        <div class="scrap" data-scrap style="width:12vw; right:2%; top:80%"><div class="fill fill--3"></div><div class="cap">launch day</div></div>
+        <div class="scrap scrap--sq" data-scrap style="width:7vw; left:42%; top:1%"><div class="fill fill--5"></div><div class="cap">sketch</div></div>
+        <div class="scrap scrap--sq" data-scrap style="width:7vw; right:40%; bottom:2%"><div class="fill fill--2"></div><div class="cap">ship it</div></div>
+      </div>
+
+      <div class="flipbook" data-flipbook>
+
+        <!-- base sheet — the end page, revealed after the final flip -->
+        <div class="flipbook__base">
+          <div class="bookpage bp-end">
+            <div class="bookpage__body">
+              <h3>…and that's the<br>highlight reel.</h3>
+              <p>A few more experiments are stacked just below ↓</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- leaves: reverse stacking order so the cover paints on top -->
+        <div class="leaf" data-leaf>
+          <div class="leaf__face leaf__front">
+            <div class="bookpage bp-care">
+              <span class="bookpage__num">05</span><span class="sticker-pop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21S3 15 3 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 2.5C21 15 12 21 12 21z"/></svg></span>
+              <div class="bookpage__body">
+                <div class="tagline">made with care —</div>
+                <h3>Care</h3>
+                <p>A care-focused mobile app — thoughtful flows and a calm, friendly interface.</p>
+                <div class="stack"><span>Flutter</span><span>Dart</span></div>
+                <a class="golink" href="https://github.com/Geltrax69" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+              <div class="bookpage__media"><div class="phone"><div class="phone__notch"></div><div class="phone__screen"><video src="hello.mp4" autoplay muted loop playsinline></video></div></div></div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+        <div class="leaf" data-leaf>
+          <div class="leaf__face leaf__front">
+            <div class="bookpage bp-better">
+              <span class="bookpage__num">04</span><span class="sticker-pop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.5 3.8 2.2 5.5 6 6-3.8.5-5.5 2.2-6 6-.5-3.8-2.2-5.5-6-6 3.8-.5 5.5-2.2 6-6z"/></svg></span>
+              <div class="bookpage__body">
+                <div class="tagline">in your pocket —</div>
+                <h3>BetterTrack-AI</h3>
+                <p>An AI-assisted tracking app built in Flutter — clean, fast, and genuinely helpful.</p>
+                <div class="stack"><span>Flutter</span><span>Dart</span><span>AI</span></div>
+                <a class="golink" href="https://github.com/Geltrax69" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+              <div class="bookpage__media"><div class="phone"><div class="phone__notch"></div><div class="phone__screen"><video src="hello.mp4" autoplay muted loop playsinline></video></div></div></div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+        <div class="leaf" data-leaf>
+          <div class="leaf__face leaf__front">
+            <div class="bookpage bp-educ">
+              <span class="bookpage__num">03</span><span class="sticker-pop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>
+              <div class="bookpage__body">
+                <div class="tagline">end to end —</div>
+                <h3>educonnect.me</h3>
+                <p>A school-management platform connecting admins, teachers and students in one place.</p>
+                <div class="stack"><span>TypeScript</span><span>Spring Boot</span><span>EJS</span></div>
+                <a class="golink" href="https://educonnect.me" target="_blank" rel="noopener">Visit educonnect.me →</a>
+              </div>
+              <div class="bookpage__media"><div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span class="url">educonnect.me</span></div><video src="hello.mp4" autoplay muted loop playsinline></video></div></div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+        <div class="leaf" data-leaf>
+          <div class="leaf__face leaf__front">
+            <div class="bookpage bp-hsta">
+              <span class="bookpage__num">02</span><span class="sticker-pop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5 20.4l1.4-6.8L1.3 9.6l6.9-.7z"/></svg></span>
+              <div class="bookpage__body">
+                <div class="tagline">live in the wild —</div>
+                <h3>Hsta.in</h3>
+                <p>A live sports platform — fixtures, teams and real-time updates in one place.</p>
+                <div class="stack"><span>TypeScript</span><span>Node</span><span>React</span></div>
+                <a class="golink" href="https://hsta.in" target="_blank" rel="noopener">Visit hsta.in →</a>
+              </div>
+              <div class="bookpage__media"><div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span class="url">hsta.in</span></div><video src="hello.mp4" autoplay muted loop playsinline></video></div></div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+        <div class="leaf" data-leaf>
+          <div class="leaf__face leaf__front">
+            <div class="bookpage bp-score">
+              <span class="bookpage__num">01</span><span class="sticker-pop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+              <div class="bookpage__body">
+                <div class="tagline">the flagship —</div>
+                <h3>scoreboard-pro</h3>
+                <p>Broadcast-style live sports scoreboard. A Go backend pushes events over WebSocket to a React/TS display with GSAP-driven score animations.</p>
+                <div class="stack"><span>Go</span><span>React</span><span>TypeScript</span><span>WebSocket</span><span>GSAP</span></div>
+                <a class="golink" href="https://github.com/Geltrax69" target="_blank" rel="noopener">View on GitHub →</a>
+              </div>
+              <div class="bookpage__media"><div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span class="url">scoreboard-pro.live</span></div><video src="hello.mp4" autoplay muted loop playsinline></video></div></div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+        <!-- cover leaf — last in DOM so it sits on top before JS sets z-index -->
+        <div class="leaf" data-leaf data-cover>
+          <div class="leaf__face leaf__front">
+            <div class="cover">
+              <span class="cover-sticker cs1"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+              <span class="cover-sticker cs2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21S3 15 3 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 2.5C21 15 12 21 12 21z"/></svg></span>
+              <div class="cover-band"></div>
+              <div class="cover-pencil"></div>
+              <div class="cover-label">
+                <div class="row"><span class="k">Name</span><span class="v">Lalit Singh</span></div>
+                <div class="row"><span class="k">Role</span><span class="v">Full-Stack Dev</span></div>
+                <div class="row"><span class="k">Roll no.</span><span class="v">69</span></div>
+              </div>
+              <div class="cover-hint">open it</div>
+            </div>
+          </div>
+          <div class="leaf__face leaf__back"></div>
+        </div>
+
+      </div>
+      <div class="bookhint" data-bookhint>scroll to open the notebook
+        <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== More work (scatter -> grid) ===== -->
+  <section class="work section wrap" id="more">
+    <div class="work__head">
+      <h2 data-reveal>more I've<br>tinkered with</h2>
+      <p data-reveal>Side quests, tools and experiments — not every repo needs a full page.</p>
+    </div>
+    <div class="proj-grid" data-grid>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#4da2ff,#5c4ade)">IM</div>
+        <h4>Inventory Management</h4>
+        <p>Full-stack inventory system with a React UI and a Spring Boot backend.</p>
+        <div class="tags"><span>React</span><span>Spring Boot</span><span>Java</span></div>
+      </article>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#55db9c,#abff84)">CP</div>
+        <h4>cloudpulse</h4>
+        <p>A lightweight monitoring dashboard for keeping an eye on services.</p>
+        <div class="tags"><span>HTML</span><span>JS</span><span>Dashboards</span></div>
+      </article>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#fb4903,#ffd731)">CPU</div>
+        <h4>CPU Scheduling Sim</h4>
+        <p>Visualize CPU scheduling algorithms with live Gantt charts and metrics.</p>
+        <div class="tags"><span>TypeScript</span><span>Viz</span></div>
+      </article>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#5c4ade,#b79bff)">SB</div>
+        <h4>SCOREBOARD_DISPLAY</h4>
+        <p>A clean broadcast scoreboard display surface for live events.</p>
+        <div class="tags"><span>TypeScript</span><span>Realtime</span></div>
+      </article>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#ff6f1e,#ff66cf)">LA</div>
+        <h4>Logs Analyzer</h4>
+        <p>Parse, search and make sense of noisy application logs.</p>
+        <div class="tags"><span>JavaScript</span><span>Tooling</span></div>
+      </article>
+      <article class="pcard" data-grid-item>
+        <div class="pcard__top" style="background:linear-gradient(135deg,#08304c,#4da2ff)">3D</div>
+        <h4>3dHouse</h4>
+        <p>An interactive 3D house scene experiment in the browser.</p>
+        <div class="tags"><span>JavaScript</span><span>3D</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Dark Lab finale ===== -->
+  <section class="lab section" id="lab">
+    <div class="shaderbg" data-shader aria-hidden="true"></div>
+    <div class="lab__blob" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="lab__label">{ <b>the stack</b> } — color is the organizing system</p>
+      <h2 data-lab-title><span class="g1">build</span>. <span class="g2">break</span>.<br><span class="g3">ship</span>. <span class="g4">repeat</span>.</h2>
+
+      <div class="skills">
+        <div class="skillrow k1"><div class="cat">Frontend</div><div class="list">React · TypeScript · Next.js · GSAP · HTML/CSS · Tailwind</div></div>
+        <div class="skillrow k2"><div class="cat">Mobile</div><div class="list">Flutter · Dart · cross-platform UI</div></div>
+        <div class="skillrow k3"><div class="cat">Backend</div><div class="list">Go · Node · Spring Boot · Java · Python · REST</div></div>
+        <div class="skillrow k4"><div class="cat">Realtime</div><div class="list">WebSockets · live data · broadcast displays</div></div>
+        <div class="skillrow k5"><div class="cat">Data</div><div class="list">PostgreSQL · MongoDB · schema design</div></div>
+        <div class="skillrow k6"><div class="cat">Craft</div><div class="list">motion design · DX · shipping fast</div></div>
+      </div>
+
+      <!-- contact -->
+      <div class="contact" id="contact">
+        <p class="lab__label">{ <b>let's build something</b> }</p>
+        <h2 class="ml5">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters letters-left">let's</span>
+            <span class="letters ampersand">&amp;</span>
+            <span class="letters letters-right">talk</span>
+            <span class="line line2"></span>
+          </span>
+        </h2>
+        <h3><a href="mailto:lalit.builds@gmail.com" data-typewriter>lalit.builds@gmail.com</a></h3>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/lalitsingh69" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+          <a href="https://github.com/Geltrax69" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+          <a href="https://x.com/LalitBuild" target="_blank" rel="noopener">X / Twitter <span class="arrow">↗</span></a>
+          <a href="https://leetcode.com/u/lalit_singh_69/" target="_blank" rel="noopener">LeetCode <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">Designed &amp; built by <b>Lalit Singh</b> · 2026 — made with GSAP, four design systems, and too much coffee.</footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+  <script src="main.js?v=15"></script>
+
+  <!-- Paper Shaders premium backdrop (vanilla @paper-design/shaders via ESM) -->
+  <script type="module">
+    try {
+      const m = await import('https://esm.sh/@paper-design/shaders');
+      const el = document.querySelector('[data-shader]');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (el && m.ShaderMount && m.meshGradientFragmentShader) {
+        new m.ShaderMount(el, m.meshGradientFragmentShader, {
+          u_colors: ['#0ae448', '#00bae2', '#9d95ff', '#fec5fb'].map(m.getShaderColorFromString),
+          u_colorsCount: 4, u_distortion: 0.85, u_swirl: 0.35, u_grainMixer: 0.15, u_grainOverlay: 0.12,
+          u_fit: 2, u_scale: 1.25, u_rotation: 0, u_offsetX: 0, u_offsetY: 0,
+          u_originX: 0.7, u_originY: 0.3, u_worldWidth: 0, u_worldHeight: 0,
+        }, undefined, reduce ? 0 : 0.55, 0);
+      }
+    } catch (e) { console.warn('paper-shaders backdrop unavailable, using CSS blobs', e); }
+  </script>
+</body>
+</html>

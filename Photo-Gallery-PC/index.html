@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="d1.css">
+    <!--<script src="d1.js"></script>-->
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Gallery</h1>
+        <div class="gallery">
+            <!-- Add 50 images here -->
+            <div class="image-container">
+                <img src="photo1.jpg" alt="Photo 1" class="slider">
+                <a href="photo1.jpg" download class="download-button">Download</a>
+            </div>
+            <div class="image-container">
+                <img src="photo2.jpg" alt="Photo 2" class="slider">
+                <a href="photo2.jpg" download class="download-button">Download</a>
+            </div>
+            <div class="image-container">
+                <img src="photo3.jpg" alt="Photo 3" class="slider">
+                <a href="photo3.jpg" download class="download-button">Download</a>
+            </div>
+
+            <div class="image-container">
+                <img src="photo4.jpg" alt="Photo 1" class="slider">
+                <a href="photo4.jpg" download class="download-button">Download</a>
+            </div>
+            <div class="image-container">
+                <img src="photo5.jpg" alt="Photo 2" class="slider">
+                <a href="photo5.jpg" download class="download-button">Download</a>
+            </div>
+            <div class="image-container">
+                <img src="photo6.jpg" alt="Photo 3" class="slider">
+                <a href="photo6.jpg" download class="download-button">Download</a>
+            </div>
+            <!-- Add more image-container divs here -->
+        </div>
+        <!-- Add page changer here -->
+        <div class="page-changer">
+            <button class="prev-button" onclick="prev()">Previous</button>
+            <button class="next-button" onclick="next()">Next</button>
+        </div>
+    </div>
+    <script>
+        var slide = document.querySelectorAll('.slider');
+        var images = [
+            'photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg', 'photo5.jpg', 'photo6.jpg',
+            'photo7.jpg', 'photo8.jpg', 'photo9.jpg', 'photo10.jpg', 'photo11.jpg', 'photo12.jpg',
+            'photo13.jpg', 'photo14.jpg', 'photo15.jpg', 'photo16.jpg', 'photo17.jpg', 'photo18.jpg',
+            'photo19.jpg', 'photo20.jpg', 'photo21.jpg', 'photo22.jpg', 'photo23.jpg', 'photo24.jpg',
+            'photo25.jpg', 'photo26.jpg', 'photo27.jpg', 'photo28.jpg', 'photo29.jpg', 'photo30.jpg',
+            'photo31.jpg', 'photo32.jpg', 'photo33.jpg', 'photo34.jpg', 'photo35.jpg', 'photo36.jpg',
+            'photo37.jpg', 'photo38.jpg', 'photo39.jpg', 'photo40.jpg', 'photo41.jpg', 'photo42.jpg',
+            'photo43.jpg', 'photo44.jpg', 'photo45.jpg', 'photo46.jpg', 'photo47.jpg', 'photo48.jpg'
+        ];
+        var i = 0;
+
+        function prev() {
+            if (i <= 0) i = images.length;
+            i -= 6;
+            setImg();
+        }
+
+        function next() {
+            if (i >= images.length - 6) i = -6;
+            i += 6;
+            setImg();
+        }
+
+        function setImg() {
+            slide.forEach((img, index) => {
+                img.setAttribute('src', images[i + index]);
+                img.nextElementSibling.setAttribute('href', images[i + index]);
+            });
+        }
+    </script>
+</body>
+</html>

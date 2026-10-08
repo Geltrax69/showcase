@@ -1,0 +1,5 @@
+:HL["/showcase/Ipad_Minimilastic_/_next/static/media/22a5144ee8d83bca-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/showcase/Ipad_Minimilastic_/_next/static/media/7d4881bb7e1bf84d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/showcase/Ipad_Minimilastic_/_next/static/css/1023b40622ec1fc3.css","style"]
+:HL["/showcase/Ipad_Minimilastic_/_next/static/css/48220c62a5191761.css","style"]
+0:{"buildId":"vFkSPY2_O2I0t-hI2qvSH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
